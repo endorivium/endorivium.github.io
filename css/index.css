@@ -4,6 +4,16 @@ body {
     background-color: rgb(101, 118, 136);
 }
 
+a {
+    color: black;
+    text-decoration-line: none;
+}
+
+a:hover {
+    color: mediumblue;
+    text-decoration-line: none;
+}
+
 .main-container {
     display: grid;
     position: relative;
@@ -25,7 +35,7 @@ body {
     border-left: 2px solid midnightblue;
 }
 
-.border-blocker{
+.border-blocker {
     width: 3px;
     height: 66px;
     bottom: calc(2% + 192px);
@@ -96,13 +106,13 @@ body {
     margin-right: 25px;
 }
 
-.project-container{
+.project-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-.project-item{
+.project-item {
     display: block;
     margin: 25px 25px 10px 25px;
     align-content: center;
@@ -115,10 +125,10 @@ body {
     filter: drop-shadow(3px 3px);
 }
 
-.commission-container{
+.commission-container {
 }
 
-.selection-container{
+.selection-container {
     display: flex;
     padding-right: 35px;
     height: 90vh;
@@ -127,27 +137,28 @@ body {
     overflow-y: auto;
 }
 
-.sub-selection-title{
+.sub-selection-title {
     margin: 25px auto 5px 15px;
     text-decoration-line: overline underline;
 }
 
-.sub-description{
+.sub-description {
     margin: 15px auto 15px 25px;
+    font-size: 1vw;
 }
 
-.sub-selection{
+.sub-selection {
     display: flex;
     height: 50vh;
     flex-direction: row;
     overflow-x: scroll;
 }
 
-.selection-img{
+.selection-img {
     margin: 10px;
 }
 
-.navigation{
+.navigation {
     display: flex;
     position: absolute;
     left: -4.5vw;
@@ -155,14 +166,14 @@ body {
     flex-direction: column;
 }
 
-.navigation-button{
+.navigation-button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     z-index: -5;
     margin: 10px;
     padding: 8px 10px 8px 8px;
-    width: 9.5vw;
-    height: 70px;
+    width: 8vw;
+    height: 50px;
     place-items: center;
     border: 2px solid midnightblue;
     border-radius: 50px 0 0 50px;
@@ -174,32 +185,32 @@ body {
     color: white;
 }
 
-.navigation-icon{
+.navigation-icon {
     margin: auto auto auto 1px;
 }
 
-.selected{
+.selected {
     position: relative;
     left: -5vw;
 }
 
-.illustrator{
+.illustrator {
     background-color: steelblue;
 }
 
-.about{
+.about {
     background-color: mediumpurple;
 }
 
-.engineer{
+.engineer {
     background-color: cornflowerblue;
 }
 
-.developer{
+.developer {
     background-color: darkslateblue;
 }
 
-.link-container{
+.link-container {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -207,7 +218,7 @@ body {
     right: -5vw;
 }
 
-.link-button{
+.link-button {
     display: flex;
     position: relative;
     flex-direction: row;
@@ -223,6 +234,23 @@ body {
     font-weight: bold;
     font-size: 0.75vw;
     color: white;
+}
+
+.art-grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.art-img {
+    width: 32%;
+    height: 100%;
+}
+
+
+.full-img{
+    width: 100% !important;
 }
 
 

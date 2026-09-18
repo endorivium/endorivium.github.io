@@ -116,15 +116,22 @@ a {
     inline-size: max-content;
     padding: 10px;
     text-align: center;
+    font-size: 0.9vw;
     border: 3px solid black;
     border-radius: 15px;
     background-color: white;
     filter: drop-shadow(3px 3px);
 }
 
-.project-item:hover{
+.project-item:not(.selected):hover{
     color: deepskyblue;
     text-decoration-line: none;
+}
+
+.project-item.selected{
+    filter: drop-shadow(1px 1px);
+    background-color: lightslategrey;
+    color: white;
 }
 
 .selection-container {
@@ -180,13 +187,13 @@ a {
     background-color: white;
     word-spacing: 20px;
     font-weight: bold;
-    font-size: 0.75vw;
+    font-size: 0.8vw;
     color: white;
     left: 0;
     transition: left ease-out 0.5s;
 }
 
-.navigation-button:hover{
+.navigation-button:not(.selected):hover{
     left: -5vw;
     text-decoration-line: underline;
 }
@@ -195,7 +202,7 @@ a {
     margin: auto auto auto 1px;
 }
 
-.selected {
+.navigation-button.selected {
     left: -5vw;
 }
 
@@ -220,18 +227,19 @@ a {
     flex-direction: column;
     position: absolute;
     bottom: 2%;
-    right: -5vw;
+    right: 6vw;
 }
 
 .link-button {
     display: flex;
     position: relative;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    align-self: flex-end;
     overflow: hidden;
-    width: 64px; /* 150px to show all*/
-    /*left: 86px; to keep same position*/
+    width: 45px;
+    height: 45px;
     margin: 10px;
-    padding: 5px 10px 5px 5px;
+    padding: 8px;
     place-items: center;
     border: 2px solid darkslategrey;
     border-radius: 25px;
@@ -239,6 +247,17 @@ a {
     font-weight: bold;
     font-size: 0.75vw;
     color: white;
+    transition: width ease-out 0.5s, left ease-out 0.5s;
+}
+
+.link-icon{
+    width: 45px;
+    margin-left: 8px;
+}
+
+.link-button:hover{
+    width: 120px;
+    text-decoration-line: underline;
 }
 
 .art-grid {

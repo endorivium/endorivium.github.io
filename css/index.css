@@ -199,7 +199,7 @@ a {
 }
 
 .navigation-icon {
-    margin: auto auto auto 1px;
+    width: 50px;
 }
 
 .navigation-button.selected {
@@ -272,11 +272,9 @@ a {
     height: 100%;
 }
 
-
-.full-img{
-    width: 100% !important;
+.emphasis{
+    font-weight: bold;
 }
-
 
 
 

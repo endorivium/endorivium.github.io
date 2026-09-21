@@ -31,15 +31,6 @@ a {
     border-left: 2px solid midnightblue;
 }
 
-.border-blocker {
-    z-index: 5;
-    width: 3px;
-    height: 66px;
-    bottom: calc(2% + 192px);
-    position: absolute;
-    background-color: steelblue;
-}
-
 .job-title {
     align-self: center;
     width: 50%;
@@ -130,7 +121,7 @@ a {
 
 .project-item.selected{
     filter: drop-shadow(1px 1px);
-    background-color: lightslategrey;
+    background-color: #4e728c;
     color: white;
 }
 
@@ -206,6 +197,15 @@ a {
     left: -5vw;
 }
 
+.border-blocker {
+    z-index: 5;
+    width: 3px;
+    height: 66px;
+    bottom: calc(2% + 192px);
+    position: absolute;
+    background-color: steelblue;
+}
+
 .illustrator {
     background-color: steelblue;
 }
@@ -227,14 +227,13 @@ a {
     flex-direction: column;
     position: absolute;
     bottom: 2%;
-    right: 6vw;
+    left: 89vw;
 }
-
 .link-button {
     display: flex;
     position: relative;
-    flex-direction: row-reverse;
-    align-self: flex-end;
+    flex-direction: row;
+    align-self: flex-start;
     overflow: hidden;
     width: 45px;
     height: 45px;
@@ -244,15 +243,16 @@ a {
     border: 2px solid darkslategrey;
     border-radius: 25px;
     filter: drop-shadow(2px 4px black);
+    color: white;
     font-weight: bold;
     font-size: 0.75vw;
-    color: white;
     transition: width ease-out 0.5s, left ease-out 0.5s;
 }
 
+
 .link-icon{
     width: 45px;
-    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .link-button:hover{
@@ -275,6 +275,46 @@ a {
 .emphasis{
     font-weight: bold;
 }
+
+.tooltip:hover .tooltip-text{
+    visibility: visible;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    place-items: center;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 105%;
+    left: -40%;
+}
+
+.tooltip-text:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 0;
+    margin-left: -10px;
+    margin-bottom: -10px;
+}
+
 
 
 

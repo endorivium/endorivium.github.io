@@ -1,0 +1,12 @@
+<script>
+    const button = document.getElementById("email-button");
+
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text);
+        alert("Copied email to clipboard: " + text);
+    }
+
+    button.addEventListener("click", function () {
+        copyToClipboard("jihrenberger@gmail.com");
+    })
+</script>

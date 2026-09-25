@@ -1,21 +1,10 @@
-body {
-    height: 100vh;
-    margin: 0;
-    background-color: rgb(101, 118, 136);
-}
-
-a {
-    color: black;
-    text-decoration-line: none;
-}
-
 .main-container {
     display: grid;
     position: relative;
     height: 100vh;
     margin: 0 12% 0 12%;
     background-color: white;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 4fr;
     border-right: 3px solid darkslategrey;
 }
 
@@ -27,7 +16,6 @@ a {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background-color: steelblue;
     border-left: 2px solid midnightblue;
 }
 
@@ -49,6 +37,7 @@ a {
     border: 3px solid black;
     border-radius: 25px;
     filter: drop-shadow(10px 10px);
+    margin-bottom: 20px;
 }
 
 .skill-container,
@@ -59,7 +48,7 @@ a {
 .skill-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
@@ -79,7 +68,7 @@ a {
     height: 25px;
     align-content: center;
     text-align: center;
-    margin: 15px 3px auto 3px;
+    margin: 3px 3px 5px 3px;
     padding: 2px 5px 2px 5px;
     border: 3px solid black;
     border-radius: 15px;
@@ -155,57 +144,6 @@ a {
     margin: 10px;
 }
 
-.navigation {
-    display: flex;
-    position: absolute;
-    left: -4.5vw;
-    bottom: 2%;
-    flex-direction: column;
-}
-
-.navigation-button {
-    display: grid;
-    position: relative;
-    grid-template-columns: 1fr 1fr;
-    margin: 10px;
-    padding: 8px 10px 8px 8px;
-    width: 8vw;
-    height: 50px;
-    place-items: center;
-    border: 2px solid midnightblue;
-    border-radius: 50px 0 0 50px;
-    filter: drop-shadow(2px 4px black);
-    background-color: white;
-    word-spacing: 20px;
-    font-weight: bold;
-    font-size: 0.8vw;
-    color: white;
-    left: 0;
-    transition: left ease-out 0.5s;
-}
-
-.navigation-button:not(.selected):hover{
-    left: -5vw;
-    text-decoration-line: underline;
-}
-
-.navigation-icon {
-    width: 50px;
-}
-
-.navigation-button.selected {
-    left: -5vw;
-}
-
-.border-blocker {
-    z-index: 5;
-    width: 3px;
-    height: 66px;
-    bottom: calc(2% + 192px);
-    position: absolute;
-    background-color: steelblue;
-}
-
 .illustrator {
     background-color: steelblue;
 }
@@ -222,44 +160,6 @@ a {
     background-color: darkslateblue;
 }
 
-.link-container {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    bottom: 2%;
-    left: 89vw;
-}
-.link-button {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    align-self: flex-start;
-    overflow: hidden;
-    width: 45px;
-    height: 45px;
-    margin: 10px;
-    padding: 8px;
-    place-items: center;
-    border: 2px solid darkslategrey;
-    border-radius: 25px;
-    filter: drop-shadow(2px 4px black);
-    color: white;
-    font-weight: bold;
-    font-size: 0.75vw;
-    transition: width ease-out 0.5s, left ease-out 0.5s;
-}
-
-
-.link-icon{
-    width: 45px;
-    margin-right: 8px;
-}
-
-.link-button:hover{
-    width: 120px;
-    text-decoration-line: underline;
-}
-
 .art-grid {
     display: flex;
     flex-flow: row wrap;
@@ -271,51 +171,6 @@ a {
     width: 32%;
     height: 100%;
 }
-
-.emphasis{
-    font-weight: bold;
-}
-
-.tooltip:hover .tooltip-text{
-    visibility: visible;
-}
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    place-items: center;
-}
-
-.tooltip-text {
-    visibility: hidden;
-    width: 150px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 105%;
-    left: -40%;
-}
-
-.tooltip-text:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-top-color: rgba(0, 0, 0, 0.6);
-    border-bottom: 0;
-    margin-left: -10px;
-    margin-bottom: -10px;
-}
-
-
 
 
 

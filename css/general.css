@@ -9,22 +9,15 @@ a {
     text-decoration-line: none;
 }
 
-button{
-    border: none;
-    background-color: transparent;
-    text-decoration-line: underline;
-    color: mediumseagreen;
-}
-
 .emphasis{
     font-weight: bold;
 }
 
-.tooltip:hover .tooltip-text{
+.tooltip-wrapper:hover .tooltip-text{
     visibility: visible;
 }
 
-.tooltip {
+.tooltip-wrapper {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -41,9 +34,8 @@ button{
     border-radius: 6px;
     position: absolute;
     z-index: 1;
-    bottom: 200%;
-    left: 0;
-    right: 0;
+    bottom: 120%;
+    left: 20%;
 }
 
 .tooltip-text:after {
@@ -60,8 +52,19 @@ button{
     margin-bottom: -10px;
 }
 
+.link-text{
+    font-size: 1.1vw;
+    text-decoration-line: underline;
+    color: mediumseagreen;
+    font-weight: bold;
+}
+
 .link-text:hover{
     color: mediumblue;
+}
+
+.double-spaced{
+    line-height: 2;
 }
 
 .section-wrapper{
@@ -88,4 +91,15 @@ button{
     justify-content: left;
     align-items: center;
     margin-top: -15px;
+}
+
+.clickable:hover{
+    cursor: pointer;
+    border: 3px solid mediumseagreen;
+    border-radius: 20px;
+}
+
+.decorative-line{
+    border-bottom: 5px double black;
+    margin: 0 15% 0 15%;
 }

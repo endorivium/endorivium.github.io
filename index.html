@@ -39,30 +39,73 @@
                 <p class="skill-item">Chinese (Beginner)</p>
             </div>
         </div>
+        <div class="section-wrapper">
+            <span class="section-header">Education</span>
+            <div class="section-content">
+                <p class="skill-item">B.Sc. Game Engineer</p>
+                <p class="skill-item">M. Sc. Computer Science (WIP)</p>
+            </div>
+        </div>
     </div>
-    <div class="description-container" style="font-size: 1vw; justify-content: center; text-align: center; padding: 20px;">
-        <p> Hi, my name is Julia Ihrenberger and I am an aspiring programmer whose interests and skills lie in game
-            development, software development and illustration work.</p>
-        <p>Due to my rather unusual career path I bring a wide array of skills that will provide assistance in all steps
-            of any game or software project.
-            I first studied game design with my eyes set on game art but then veered off into game engineering, having
-            found great joy in the logical aspects of programming.
-            Thus, I’m currently working on my computer science master’s to further my skills and education.</p>
-        <p>Combining this with my ability to visualize and streamline ideas on the spot, so that everyone stays on the
-            same page and understands the vision, I’m a good addition to any team but also just as capable on my own.
-            If I have piqued your interest and you’ve got a project or inquiries for me, then feel free by sending me an
-            email via the button on the right or to this email: <span class="tooltip">
-            <button id="email-copy" class="link-text">jihrenberger@gmail.com</button>
-            <span id="tooltip" class="tooltip-text">copy to clipboard</span>
-        </span></p>
-
+    <div style="font-size: 1.1vw; justify-content: center; text-align: center; padding: 20px; display: grid; grid-template-columns: 1fr 1fr">
+        <div style="display: flex; flex-direction: column; justify-content: center;  margin-right: 20px">
+            <div class="decorative-line"></div>
+            <p> Hi, my name is <span class="emphasis" style="color: mediumblue">Julia Ihrenberger</span>, and I am an
+                aspiring programmer whose
+                interests and skills lie in
+                <br><a class="link-text skill-item double-spaced">game
+                    development</a>, <a class="link-text skill-item double-spaced">software development</a>
+                and.
+                <span class="tooltip-wrapper">
+                    <a class="link-text skill-item double-spaced"
+                       href="illustrator/commission.html">illustration work</a>
+            <span class="tooltip-text">click to open project</span>
+                </span></p>
+            <p>
+                I first studied game design with my eyes set on game art but then veered off into game engineering,
+                having found great joy in the <span class="emphasis" style="color: dodgerblue">logical aspects of programming</span>.
+                I’m currently working on my <span class="emphasis" style="color: dodgerblue">Master's in computer science</span>
+                to further my skills and education.</p>
+            <p>Due to my rather unusual career path I bring a <span class="emphasis" style="color: blueviolet">wide array of skills</span>
+                that will provide assistance in all
+                steps of any game or software project.
+                Combining this with my <span class="emphasis" style="color: blueviolet">ability to visualize and streamline ideas on the spot</span>,
+                so that everyone stays on
+                the same page and understands the vision, I’m a <span class="emphasis" style="color: blueviolet">good addition to any team</span>
+                but also just as capable on my
+                own.</p>
+            <p>If I have piqued your interest, and you’ve got a project or inquiries for me, then feel free to email me
+                via the button on the right or to this email:
+                <span class="tooltip-wrapper">
+            <button id="email-copy" class="link-text"
+                    style="background-color: transparent;
+                    border: none;
+                    font-size: 1vw">jihrenberger@gmail.com</button>
+            <span class="tooltip-text email">copy to clipboard</span>
+                </span></p>
+            <div class="decorative-line"></div>
+        </div>
+        <div class="vertical-grid" style="height: 95vh; overflow-x: hidden">
+            <img class="list-img clickable" src="img/projects/TCBH_showcase.jpg"
+                 alt="splash art for game 'Trash Can be Home'"
+                 title="click to open project">
+            <img class="list-img clickable" src="img/projects/BB_showcase.jpg" alt="splash art for game 'Bakery Battle'"
+                 title="click to open project">
+            <img class="list-img clickable" src="img/projects/overwatchteamup.jpg" alt="screenshot of web application"
+                 title="click to open project">
+            <a href="illustrator/commission.html">
+                <img class="list-img clickable" src="img/priebsch/concept/jakob.jpg"
+                     alt="concept art for 'Jakob' commission"
+                     title="click to open project" style="width: 95%;">
+            </a>
+        </div>
     </div>
 </div>
 <socmed-links class="link-container"></socmed-links>
 </body>
 <script>
     const button = document.getElementById("email-copy");
-    const tooltip = document.getElementById("tooltip");
+    const tooltips_email = document.querySelectorAll('.tooltip-text.email');
 
     function copyToClipboard(text) {
         navigator.clipboard.writeText(text);
@@ -70,11 +113,16 @@
 
     button.addEventListener("click", function () {
         copyToClipboard("jihrenberger@gmail.com");
-        tooltip.textContent = "email copied!";
+
+        tooltips_email.forEach(span => {
+            span.textContent = "email copied!";
+        })
     })
 
     button.addEventListener("mouseleave", function () {
-        tooltip.textContent = "copy to clipboard"
+        tooltips_email.forEach(span => {
+            span.textContent = "click to copy";
+        })
     })
 </script>
 </html>

@@ -16,7 +16,7 @@
     height: 50px;
     place-items: center;
     border: 2px solid midnightblue;
-    border-radius: 50px 0 0 50px;
+    border-radius: 25px 0 0 25px;
     filter: drop-shadow(2px 4px black);
     background-color: white;
     word-spacing: 20px;
@@ -27,6 +27,10 @@
     transition: left ease-out 0.5s;
 }
 
+.selected{
+    pointer-events: none;
+}
+
 .navigation-button:not(.selected):hover{
     left: -5vw;
     text-decoration-line: underline;
@@ -34,6 +38,7 @@
 
 .navigation-icon {
     width: 50px;
+    margin-left: -10px;
 }
 
 .navigation-button.selected {
@@ -66,7 +71,7 @@
     padding: 8px;
     place-items: center;
     border: 2px solid darkslategrey;
-    border-radius: 25px;
+    border-radius: 15px;
     filter: drop-shadow(2px 4px black);
     color: white;
     font-weight: bold;

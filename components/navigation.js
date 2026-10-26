@@ -15,7 +15,7 @@ class Navigation extends HTMLElement {
             Game Engineer</a>
         <a class="navigation-button softwaredev">
             <img class="navigation-icon" src="../img/icons/gamedev.png" alt="about icon">
-            Software Developer</a>
+            Software Developer (WIP)</a>
         `;
 
         switch (this.attributes.job.value) {
